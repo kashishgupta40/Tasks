@@ -3,12 +3,35 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>google form</title>
+    <title>Code Submission Form</title>
 </head>
 <body>
-    <form action="">
-        Enter your first name  <br>  
-    <input type="text" name="username">  
+    <h2>Code Submission Form</h2>
+    <form action="submit.php" method="post" enctype="multipart/form-data">
+        <!-- Username Field -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required><br><br>
+
+        <!-- Preferred Code Language Field -->
+        <label for="codelang">Preferred Code Language:</label>
+        <select id="codelang" name="codelang" required>
+            <option value="">Select</option>
+            <option value="C++">C++</option>
+            <option value="Java">Java</option>
+            <option value="JavaScript">JavaScript</option>
+            <option value="Python">Python</option>
+        </select><br><br>
+
+        <!-- Standard Input Field -->
+        <label for="stdin">Standard Input (stdin):</label>
+        <textarea id="stdin" name="stdin" rows="4" cols="50"></textarea><br><br>
+
+        <!-- Source Code Field -->
+        <label for="sourcecode">Source Code:</label>
+        <input type="file" id="sourcecode" name="sourcecode" accept=".cpp,.java,.js,.py" required><br><br>
+
+        <!-- Submit Button -->
+        <input type="submit" value="Submit">
     </form>
 </body>
 </html>
