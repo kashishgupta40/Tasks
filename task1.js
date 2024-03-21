@@ -14,10 +14,14 @@ function ValidatePassword() {
         return divLength;
     }
     
-function testJS() {
-    var b = document.getElementById('name').value,
-            url = 'task1.html' + encodeURIComponent(b);
-        
-        document.location.href = url;
+    function testJS() {
+        // Use const for variables that won't be reassigned
+        const inputElement = document.getElementById('name'),
+              // Add default value for the query parameter
+              baseUrl = 'task1.html',
+              queryParameter = inputElement.value || '';
+        // Use template literals for string concatenation
+        const url = `${baseUrl}?q=${encodeURIComponent(queryParameter)}`;
+        // Use window.location.href instead of document.location.href
+        window.location.href = url;
     }
-    
