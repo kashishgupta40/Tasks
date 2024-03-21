@@ -33,10 +33,19 @@
         <input type="file" id="sourcecode" name="sourcecode" accept=".cpp,.java,.js,.py" required><br><br>
 
         <!-- Submit Button -->
-        <input type="submit" value="Submit">
+        <input type="submit" value="Submit"><br><br>
+
+        <!-- show all the previous entries -->
+        <a href="task2.html" id="HyperLink1" onclick="return ValidatePassword();">Show all the previous entries</a>
+
+        
     </form>
 
-    <script src="task1.js"></script>
+    <script src="task1.js">
+window.onload = function () {
+    showDivLength();
+}
+    </script>
 
 </body>
 </html>
